@@ -1,6 +1,6 @@
 <template>
-    <default-field :field="field" :errors="errors" :show-help-text="showHelpText">
-        <template slot="field">
+    <component :is="'DefaultField'" :field="field" :errors="errors" :show-help-text="showHelpText">
+        <template #field>
             <input
                 :id="field.name"
                 type="text"
@@ -15,7 +15,7 @@
                 {{ firstError }}
             </p>
         </template>
-    </default-field>
+    </component>
 </template>
 
 <script>
